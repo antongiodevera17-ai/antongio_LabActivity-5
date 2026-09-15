@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Student Profile Controller</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Student Profile Controller</h1>
+
+    <!-- Control Panel -->
+    <div class="control-panel">
+      <div class="form-group">
+        <label for="nameInput">Student Name</label>
+        <input type="text" id="nameInput" placeholder="Enter student name" value="Maria Santos">
+      </div>
+
+      <div class="form-group">
+        <label for="programInput">Program</label>
+        <select id="programInput">
+          <option value="BS Information Technology">BS Information Technology</option>
+          <option value="BS Computer Science">BS Computer Science</option>
+          <option value="BS Information Systems">BS Information Systems</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="yearInput">Year Level</label>
+        <select id="yearInput">
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year" selected>3rd Year</option>
+          <option value="4th Year">4th Year</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="statusInput">Status</label>
+        <select id="statusInput">
+          <option value="active" selected>active</option>
+          <option value="inactive">inactive</option>
+        </select>
+      </div>
+
+      <div id="formMessage" class="form-message"></div>
+
+      <div class="button-group">
+        <button type="button" id="updateBtn">Update Profile</button>
+        <button type="button" id="toggleDetailsBtn">Toggle Details</button>
+        <button type="button" id="themeBtn">Toggle Theme</button>
+        <button type="button" id="resetBtn">Reset</button>
+      </div>
+    </div>
+
+    <!-- Student Profile Card -->
+    <article id="profileCard" class="profile-card active" data-student-id="2026-001" data-status="active">
+      <h2 id="profileName">Maria Santos</h2>
+      <p id="profileProgram">BS Information Technology</p>
+      <p id="profileYear">3rd Year</p>
+      <p id="profileStatus">Active</p>
+      <div id="detailsPanel" class="details-panel">
+        <p id="studentIdDisplay">Student ID: 2026-001</p>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

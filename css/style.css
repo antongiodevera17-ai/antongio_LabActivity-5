@@ -1,0 +1,126 @@
+
+:root {
+    --bg-color: #f4f6f9;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --border-color: #cccccc;
+    --active-color: #2e7d32;
+    --inactive-color: #c62828;
+    --btn-bg: #0056b3;
+    --btn-text: #ffffff;
+    --panel-bg: #eef2f5;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  
+  body.dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --card-bg: #2d2d2d;
+    --border-color: #444444;
+    --btn-bg: #3700b3;
+    --panel-bg: #3a3a3a;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .control-panel {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 12px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+  
+  .form-message {
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: var(--inactive-color);
+    min-height: 1.2em;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  
+  .profile-card {
+    background-color: var(--card-bg);
+    border-left: 6px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    transition: border-color 0.3s;
+  }
+  
+  
+  .profile-card.active {
+    border-left-color: var(--active-color);
+  }
+  
+  .profile-card.inactive {
+    border-left-color: var(--inactive-color);
+  }
+  
+  .details-panel {
+    background-color: var(--panel-bg);
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+  }
+  
+  
+  .hidden {
+    display: none !important;
+  }
